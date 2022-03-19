@@ -1,38 +1,238 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Spartan", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* App */
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: hsl(180, 29%, 50%);
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url(./images/bg-header-mobile.svg);
+  background-position: center;
 }
-
 .App-link {
   color: #61dafb;
 }
+main {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  background-color: hsl(180, 52%, 96%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Card */
+.card {
+  margin-bottom: 3rem;
+  background-color: #fff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 5px 13px 5px rgb(27 102 110 / 13%);
+  padding: 1.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: left;
+  padding-top: 2.3rem;
+  min-width: 20rem;
+  max-width: 20rem;
+}
+.info-container {
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: column;
+}
+.left-accent {
+  margin-bottom: 3rem;
+  width: 5px;
+  background-color: hsl(180, 29%, 50%);
+  left: 0;
+  top: 0;
+  display: block;
+  position: relative;
+  border-radius: 8px 0 0 8px;
+}
+.card-wrapper {
+  display: flex;
+  border-radius: 8px;
+}
+.card:after {
+  height: 100%;
+  width: 3px;
+  background-color: hsl(180, 29%, 50%);
+  left: 0;
+  top: 0;
+  border-radius: 8px 0 0 8px;
+}
+/* compaony logo */
+.company-logo {
+  position: absolute;
+  left: 18px;
+  top: -27px;
+}
+.company-logo img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+/* comoany name */
+.company-header {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+.company-name {
+  color: hsl(180, 29%, 50%);
+  font-size: 0.9rem;
+}
+.notification-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.notification {
+  color: white;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  padding: 0.4rem 0.5rem;
+  padding-bottom: 0.3rem;
+}
+.new-noti {
+  background-color: hsl(180, 29%, 50%);
+}
+.feature-noti {
+  background-color: hsl(180, 14%, 20%);
+}
+/* title */
+.job-title {
+  color: hsl(180, 14%, 20%);
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+/* info */
+.post-info {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 0.7rem;
+  color: hsl(180, 8%, 52%);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.post-info ul {
+  display: flex;
+  gap: 1.7rem;
+}
+.post-info ul li:first-child {
+  list-style-type: none;
+}
+/* tags */
+.tags {
+  padding-top: 1.5rem;
+  border-top: 1px solid hsl(180deg 16% 87%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tag-btn {
+  cursor: pointer;
+  padding: 0.7em 0.5rem;
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(176deg 55% 42%);
+  font-weight: 700;
+  border-radius: 7px;
+  border: none;
+  transition: background-color 150ms ease, color 100ms ease;
+}
+.selected-tags {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 1.45rem;
+  border-radius: 8px;
+  margin-top: -8rem;
+  padding: 1.3rem;
+  padding-right: 1.25rem;
+  margin-bottom: 3.27rem;
+}
+.tag-container {
+  display: flex;
+}
+.tag-container .tag-btn {
+  cursor: default;
+}
+.tags-container {
+  max-width: 80%;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  border: none;
+  padding-top: 0;
+}
+.tag-btn {
+  display: flex;
+  font-size: 0.85rem;
+  border-radius: 5px 0 0 5px;
+  font-family: arial;
+  letter-spacing: 0.5px;
+}
+.tag-delete-btn {
+  background-color: hsl(180, 29%, 50%);
+  height: 100%;
+  display: block;
+  padding: 0.7em 0.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  padding-bottom: 0.3rem;
+}
+.tag-delete-btn img {
+  pointer-events: none;
+}
+.tag-clear-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0.7em 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #97a6ad;
+  letter-spacing: 0.5px;
+}
+
+/* hover */
+@media (hover) {
+  .job-title:hover {
+    color: hsl(176deg 55% 42%);
   }
-  to {
-    transform: rotate(360deg);
+  .tags button:hover {
+    background-color: hsl(180, 14%, 20%);
+    color: white;
+  }
+  .tag-clear-btn:hover {
+    color: hsl(180, 29%, 50%);
+    text-decoration: underline;
   }
 }
