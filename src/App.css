@@ -222,6 +222,42 @@ main {
   letter-spacing: 0.5px;
 }
 
+/* desktop */
+@media (min-width: 768px) {
+  .App-header {
+    background-image: url(./images/bg-header-desktop.svg);
+  }
+  .company-logo {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .company-logo img {
+    width: 80px;
+    height: 80px;
+  }
+  .card {
+    width: calc(100vw - 4rem);
+    max-width: 60rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .info-container {
+    min-width: 17rem;
+  }
+  .tags {
+    border: none;
+    margin-left: auto;
+    padding-top: 0;
+    min-width: 17rem;
+  }
+  .tags-container {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
 /* hover */
 @media (hover) {
   .job-title:hover {
