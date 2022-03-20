@@ -86,7 +86,7 @@ main {
   top: 0;
   border-radius: 8px 0 0 8px;
 }
-/* compaony logo */
+/* company logo */
 .company-logo {
   position: absolute;
   left: 18px;
@@ -97,7 +97,7 @@ main {
   height: 50px;
   cursor: pointer;
 }
-/* comoany name */
+/* company name */
 .company-header {
   display: flex;
   gap: 1rem;
@@ -107,6 +107,7 @@ main {
   color: hsl(180, 29%, 50%);
   font-size: 0.9rem;
 }
+/* company name - notification*/
 .notification-container {
   display: flex;
   gap: 0.5rem;
@@ -160,12 +161,17 @@ main {
   padding: 0.7em 0.5rem;
   background-color: hsl(180, 31%, 95%);
   color: hsl(176deg 55% 42%);
-  font-weight: 700;
   border-radius: 7px;
   border: none;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  font-size: 0.85rem;
+  font-family: arial;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   transition: background-color 150ms ease, color 100ms ease;
 }
-.selected-tags {
+.selected-tags-section {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -177,13 +183,7 @@ main {
   padding-right: 1.25rem;
   margin-bottom: 3.27rem;
 }
-.tag-container {
-  display: flex;
-}
-.tag-container .tag-btn {
-  cursor: default;
-}
-.tags-container {
+.selected-tags-container {
   max-width: 80%;
   flex-wrap: wrap;
   display: flex;
@@ -191,12 +191,11 @@ main {
   border: none;
   padding-top: 0;
 }
-.tag-btn {
+.single-selected-tag {
   display: flex;
-  font-size: 0.85rem;
-  border-radius: 5px 0 0 5px;
-  font-family: arial;
-  letter-spacing: 0.5px;
+}
+.single-selected-tag .tag-btn {
+  cursor: default;
 }
 .tag-delete-btn {
   background-color: hsl(180, 29%, 50%);
@@ -222,7 +221,7 @@ main {
   letter-spacing: 0.5px;
 }
 
-/* desktop */
+/* Desktop */
 @media (min-width: 768px) {
   .App-header {
     background-image: url(./images/bg-header-desktop.svg);
@@ -252,13 +251,13 @@ main {
     padding-top: 0;
     min-width: 17rem;
   }
-  .tags-container {
+  .selected-tags-container {
     margin-right: auto;
     margin-left: 0;
   }
 }
 
-/* hover */
+/* Hover */
 @media (hover) {
   .job-title:hover {
     color: hsl(176deg 55% 42%);

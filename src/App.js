@@ -25,16 +25,21 @@ function App() {
     setSelectedTags((prev) => prev.filter((tag) => tag !== tagText));
   };
 
+  const filteredItems = dataArr.filter((item) => {
+    let test = Object.values(item).flat();
+    return selectedTags.every((tag) => test.includes(tag));
+  });
+
   return (
     <div className="App">
       <header className="App-header"></header>
       <main>
         {selectedTags.length > 0 && (
-          <section className="card selected-tags">
-            <div className=" tags tags-container">
+          <section className="card selected-tags-section">
+            <div className="tags selected-tags-container">
               {selectedTags.map((tag, index) => {
                 return (
-                  <div className="tag-container" key={index}>
+                  <div className="single-selected-tag" key={index}>
                     <div className="tag-btn">{tag}</div>
                     <button className="tag-delete-btn" onClick={(e) => deleteSelectedTag(e)}>
                       <img src="./images/icon-remove.svg" alt="remove" />
@@ -48,7 +53,7 @@ function App() {
             </button>
           </section>
         )}
-        {dataArr.map((item, index) => {
+        {filteredItems.map((item, index) => {
           return (
             <div className="card-wrapper" key={index}>
               <div className="left-accent"></div>
