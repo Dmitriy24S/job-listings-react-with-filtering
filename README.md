@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Easybank landing page
+
+![Design preview for Job listings react page](./design/desktop-preview.jpg)
+
+## Welcome 
+
+Job listings react page with filtering. Created with React & CSS.
+
+[Live Demo](https://dmitriy24s.github.io/job-listings-react-with-filtering/) 👈
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
